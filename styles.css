@@ -1,17 +1,32 @@
 :root {
   --primary-color: #34912a;
   --secondary-color: #f9fbf7;
+  --dark-color: #2f3234;
 }
+a {
+  text-decoration: none;
+}
+p {
+  color: var(--secondary-color);
+}
+/* div {
+  border: 1px;
+  border-style: dashed;
+  border-color: aqua;
+} */
 h1 {
   font-family: "Great Vibes", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 40px;
-  color: #ffffff;
+  color: var(--secondary-color);
+}
+h2 {
+  color: var(--secondary-color);
 }
 sub {
   font-size: 16px;
-  color: #e2e0e0;
+  color: var(--secondary-color);
 }
 
 .heroSection {
@@ -21,6 +36,31 @@ sub {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.726);
   display: flex;
   justify-content: center;
+}
+.navigation {
+  background-color: var(--dark-color);
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  height: 4vh;
+}
+.navigation a {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: clamp(8px, 2vw, 16px);
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.navigation a:hover {
+  color: var(--primary-color);
+  text-decoration-color: var(--primary-color);
+  pointer-events: auto;
+  transition: 500ms;
 }
 
 .heroText {
@@ -35,6 +75,7 @@ sub {
   border-style: solid;
   border-color: var(--primary-color);
   border-width: 2px;
+  border-radius: 4px;
   padding: 8px;
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -49,6 +90,26 @@ sub {
   text-decoration-color: var(--secondary-color);
   pointer-events: auto;
   transition: 500ms;
+}
+
+.sectionDark {
+  background-color: var(--dark-color);
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+.sectionDark img {
+  width: 100px;
+  margin: 8px;
+}
+.aboutUsLeft {
+  padding: 16px;
+}
+.aboutUsRight {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column wrap;
+  height: 170px;
 }
 
 @media only screen and (min-width: 768px) /*tablet*/ {
