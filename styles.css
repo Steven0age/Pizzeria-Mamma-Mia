@@ -8,12 +8,14 @@ a {
 }
 p {
   color: var(--secondary-color);
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
-/* div {
+div {
   border: 1px;
   border-style: dashed;
   border-color: aqua;
-} */
+}
 h1 {
   font-family: "Great Vibes", serif;
   font-weight: 400;
@@ -71,16 +73,15 @@ sub {
   text-align: center;
 }
 
-.heroButton {
+.button {
   border-style: solid;
-  border-color: var(--primary-color);
   border-width: 2px;
   border-radius: 4px;
   padding: 8px;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
-.heroButton:hover {
+.button:hover {
   border-style: solid;
   border-color: var(--secondary-color);
   border-width: 2px;
@@ -91,25 +92,33 @@ sub {
   pointer-events: auto;
   transition: 500ms;
 }
+.btnPrimary {
+  color: var(--secondary-color);
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+}
 
 .sectionDark {
   background-color: var(--dark-color);
-  min-height: 40vh;
-  display: flex;
-  flex-direction: column;
-}
-.sectionDark img {
-  width: 100px;
-  margin: 8px;
+  display: grid;
 }
 .aboutUsLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   padding: 16px;
 }
 .aboutUsRight {
-  display: flex;
-  justify-content: space-around;
-  flex-flow: column wrap;
-  height: 170px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.aboutUsRight img {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+}
+.aboutUsRight div {
+  display: grid;
 }
 
 @media only screen and (min-width: 768px) /*tablet*/ {
