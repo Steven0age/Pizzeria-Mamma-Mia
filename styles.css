@@ -12,16 +12,22 @@ body {
   font-size: 10px;
 }
 a {
-  text-decoration: none;
+  color: var(--secondary-color);
+  transition: transform 0.2s;
+  text-decoration-color: var(--primary-color);
+}
+a:hover {
+  text-decoration-color: var(--primary-color);
+  transform: scale(1.1);
 }
 p {
   margin-top: 1em;
   margin-bottom: 1em;
 }
 div {
-  /* border: 1px;
+  border: 1px;
   border-style: dashed;
-  border-color: aqua; */
+  border-color: aqua;
 }
 h1 {
   font-family: "Great Vibes", serif;
@@ -50,15 +56,13 @@ sub {
   padding: 8px;
   margin-top: 16px;
   margin-bottom: 16px;
+  text-decoration: none;
+  text-align: center;
 }
 .button:hover {
   border-style: solid;
-  border-color: var(--secondary-color);
   border-width: 2px;
-  background-color: #ffffff00;
-  color: var(--secondary-color);
   text-decoration: underline;
-  text-decoration-color: var(--secondary-color);
   pointer-events: auto;
   transition: 500ms;
 }
@@ -66,6 +70,26 @@ sub {
   color: var(--secondary-color);
   border-color: var(--primary-color);
   background-color: var(--primary-color);
+}
+
+.btnPrimary:hover {
+  border-color: var(--secondary-color);
+  background-color: #ffffff00;
+  color: var(--secondary-color);
+  text-decoration-color: var(--secondary-color);
+}
+
+.btnPrimaryOpposite {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background-color: #ffffff00;
+}
+
+.btnPrimaryOpposite:hover {
+  color: var(--secondary-color);
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  text-decoration-color: var(--secondary-color);
 }
 
 .sectionDark {
@@ -83,12 +107,16 @@ sub {
   max-width: 970px;
   margin: auto;
   align-items: center;
+  padding-left: 4vw;
+  padding-right: 4vw;
 }
 
 .sectionContentSmall {
   max-width: 240px;
   margin: auto;
   align-items: center;
+  padding-left: 4vw;
+  padding-right: 4vw;
 }
 
 .heroSection {
@@ -137,8 +165,6 @@ sub {
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding-left: 24px;
-  padding-right: 24px;
 }
 .aboutUsRight {
   display: grid;
@@ -147,7 +173,7 @@ sub {
 .aboutUsRight img {
   box-sizing: border-box;
   width: 100%;
-  padding: 8px;
+  padding-right: 8px;
 }
 .aboutUsRight div {
   display: flex;
@@ -169,6 +195,25 @@ sub {
 
 .hoursSection td:first-child {
   text-align: left;
+}
+
+.contactSection {
+  display: flex;
+  flex-direction: column;
+}
+.contactLeft img {
+  width: 100%;
+}
+.contactRight {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: start;
+}
+
+.contactRight div {
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (min-width: 768px) /*tablet*/ {
